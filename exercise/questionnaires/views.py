@@ -8,10 +8,6 @@ from .models import Questionnaire
 
 
 # Create your views here.
-
-# def say_hello(request):
-#     return render(request, 'register.html')
-
 def index(request):
     return render(request, 'index.html')  # Render a different template for the root URL
 
