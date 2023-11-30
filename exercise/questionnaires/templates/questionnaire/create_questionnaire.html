@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Questionnaire</title>
+  </head>
+  <body>
+    <h1>Create Questionnaire</h1>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <label for="question">Question:</label><br />
+      <input type="text" id="question" name="question" /><br /><br />
+
+      <label for="choice1">Choice 1:</label><br />
+      <input type="text" id="choice1" name="choice1" /><br /><br />
+
+      <label for="choice2">Choice 2:</label><br />
+      <input type="text" id="choice2" name="choice2" /><br /><br />
+
+      <!-- You can add more choices if needed -->
+      <!-- For instance:
+        <label for="choice3">Choice 3:</label><br>
+        <input type="text" id="choice3" name="choice3"><br><br>
+        -->
+
+      <input type="submit" value="Create Questionnaire" />
+    </form>
+  </body>
+</html>
