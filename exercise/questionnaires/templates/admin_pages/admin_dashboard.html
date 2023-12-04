@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+      /* Basic styles for sidebar and content */
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .sidebar {
+        width: 250px;
+        height: 100vh;
+        background-color: #333;
+        color: #fff;
+        padding-top: 20px;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      /* Styles for sidebar links */
+      .sidebar a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .sidebar a:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="{% url 'list_customers' %}">List Customers</a>
+      <a href="{% url 'customer_responses' customer_id=123 %}"
+        >Customer Responses</a
+      >
+      <a href="{% url 'create_questionnaire' %}">Create Questionnaire</a>
+    </div>
+
+    <!-- Content area -->
+    <div class="content">
+      <!-- Content of the selected page will be displayed here -->
+    </div>
+  </body>
+</html>

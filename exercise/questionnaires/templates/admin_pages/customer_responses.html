@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Customer Responses</title>
+    <!-- Add your CSS or stylesheets -->
+  </head>
+  <body>
+    <h1>Customer Responses</h1>
+    <h2>{{ customer.name }}'s Responses:</h2>
+    <ul>
+      {% for response in customer_responses %}
+
+      <li>{{ response.question }}: {{ response.answer }}</li>
+      <!-- Display other response details as needed -->
+      {% endfor %}
+    </ul>
+  </body>
+</html>

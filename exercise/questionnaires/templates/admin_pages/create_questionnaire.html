@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create Questionnaire</title>
+    <!-- Add your CSS or stylesheets -->
+  </head>
+  <body>
+    <h1>Create Questionnaire</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="question">Question:</label>
+      <input type="text" name="question" id="question" />
+      <label for="option1">Option 1:</label>
+      <input type="text" name="option1" id="option1" />
+      <label for="option2">Option 2:</label>
+      <input type="text" name="option2" id="option2" />
+      <label for="option3">Option 3:</label>
+      <input type="text" name="option3" id="option3" />
+      <button type="submit">Create</button>
+    </form>
+  </body>
+</html>

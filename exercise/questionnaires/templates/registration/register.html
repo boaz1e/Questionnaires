@@ -3,12 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>User Registration</title>
+    {% load static%} <link rel="stylesheet" href={% static 'register.css' %} />
   </head>
   <body>
-    <h1>Register</h1>
-    <form method="post">
-      {% csrf_token %} {{ form.as_p }}
-      <button type="submit">Register</button>
-    </form>
+    <div class="container">
+      <h1>Register</h1>
+      <form method="post">
+        {% csrf_token %}
+        <div class="user-type">
+          <label for="admin">Admin</label>
+          <input type="radio" name="user_type" value="admin" id="admin" />
+          <label for="user">User</label>
+          <input type="radio" name="user_type" value="customer" id="customer" />
+        </div>
+        <!-- Other form fields -->
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+      </form>
+    </div>
   </body>
 </html>
